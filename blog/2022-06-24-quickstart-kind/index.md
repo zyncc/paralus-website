@@ -104,7 +104,11 @@ _Refer to the value of `fqdn.domain` in your [values.yaml](https://github.com/pa
 
 Open your favorite web browser and navigate to `http://console.paralus.local`, you will see the dashboard with the login screen.
 
-> **Note:** Docker-for-Mac does not expose container networks directly on the macOS host & hence you will not be able to access Paralus dashboard if you're on a Mac machine. We suggest using [docker-mac-net-connect](https://github.com/chipmk/docker-mac-net-connect) utility to overcome this issue.
+> **Note:** When deploying Paralus on a local kind cluster, the cluster does not expose an external IP address for the LoadBalancer by default. To address this limitation, we recommend installing the [Cloud Provider KIND](https://kind.sigs.k8s.io/docs/user/loadbalancer/) utility.
+
+```bash
+go install sigs.k8s.io/cloud-provider-kind@latest
+```
 
 ### Resetting Default Password
 
