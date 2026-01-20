@@ -7,7 +7,7 @@ sidebar_position: 5
 
 ---
 
-## v0.3.0
+## v0.3.1
 
 **January 14, 2026**
 
